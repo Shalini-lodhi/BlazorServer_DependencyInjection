@@ -1,4 +1,5 @@
 using DependencyInjection.Logic;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddTransient<ILogicClass, LogicClass>();
+builder.Host.UseSerilog((Context, config) =>
+{
+    config.WriteTo.Console();
+});
 
 var app = builder.Build();
 

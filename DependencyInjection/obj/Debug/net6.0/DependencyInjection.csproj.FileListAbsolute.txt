@@ -30,3 +30,14 @@ C:\Users\X6SLODHI\Documents\Training_codes\Blazor\BlazorServer_DependencyInjecti
 C:\Users\X6SLODHI\Documents\Training_codes\Blazor\BlazorServer_DependencyInjection\DependencyInjection\obj\Debug\net6.0\DependencyInjection.pdb
 C:\Users\X6SLODHI\Documents\Training_codes\Blazor\BlazorServer_DependencyInjection\DependencyInjection\obj\Debug\net6.0\DependencyInjection.genruntimeconfig.cache
 C:\Users\X6SLODHI\Documents\Training_codes\Blazor\BlazorServer_DependencyInjection\DependencyInjection\obj\Debug\net6.0\ref\DependencyInjection.dll
+C:\Users\X6SLODHI\Documents\Training_codes\Blazor\BlazorServer_DependencyInjection\DependencyInjection\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\X6SLODHI\Documents\Training_codes\Blazor\BlazorServer_DependencyInjection\DependencyInjection\bin\Debug\net6.0\Serilog.dll
+C:\Users\X6SLODHI\Documents\Training_codes\Blazor\BlazorServer_DependencyInjection\DependencyInjection\bin\Debug\net6.0\Serilog.AspNetCore.dll
+C:\Users\X6SLODHI\Documents\Training_codes\Blazor\BlazorServer_DependencyInjection\DependencyInjection\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+C:\Users\X6SLODHI\Documents\Training_codes\Blazor\BlazorServer_DependencyInjection\DependencyInjection\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+C:\Users\X6SLODHI\Documents\Training_codes\Blazor\BlazorServer_DependencyInjection\DependencyInjection\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+C:\Users\X6SLODHI\Documents\Training_codes\Blazor\BlazorServer_DependencyInjection\DependencyInjection\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+C:\Users\X6SLODHI\Documents\Training_codes\Blazor\BlazorServer_DependencyInjection\DependencyInjection\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+C:\Users\X6SLODHI\Documents\Training_codes\Blazor\BlazorServer_DependencyInjection\DependencyInjection\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+C:\Users\X6SLODHI\Documents\Training_codes\Blazor\BlazorServer_DependencyInjection\DependencyInjection\bin\Debug\net6.0\Serilog.Sinks.File.dll
+C:\Users\X6SLODHI\Documents\Training_codes\Blazor\BlazorServer_DependencyInjection\DependencyInjection\obj\Debug\net6.0\DependencyInjection.csproj.CopyComplete
