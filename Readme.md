@@ -1,24 +1,29 @@
 # Dependency Injection (Blazor Server)
 
-By Default it is in **ASP.NET**
+## Singleton 
+[Program.cs](https://github.com/Shalini-lodhi/BlazorServer_DependencyInjection/edit/2_Adding_DI/DependencyInjection/Program.cs)
+```c#
+builder.Services.AddSingleton<LogicClass>();
+```
+[Index.razor](https://github.com/Shalini-lodhi/BlazorServer_DependencyInjection/blob/2_Adding_DI/DependencyInjection/Pages/Index.razor)
+```c#
+@page "/"
+@using DependencyInjection.Logic
+@inject LogicClass logic 
 
-- allows to develop loosely-coupled code that is easy to maintain
-- redue dependencies among classes by injecting those dependencies at *run-time* instead of design time technically.
+<PageTitle>Index</PageTitle>
 
-- dependency injection is a way to create your dependencies outside of the class that uses it. 
-- we inject them from the outside, and take control about their creation away from the inside of your class.
+<h1>Hello, world!</h1>
+<h3>Value1 : @logic.Value1</h3>
+<h3>Value1 : @logic.Value2</h3>
+@code {
+    //private LogicClass logic;
+    protected override void OnInitialized()
+    {
+        //intentiating the class 
+        //logic = new();
+    }
+}
+```
+<img width="684" alt="image" src="https://user-images.githubusercontent.com/55933789/229438356-9719b901-348d-4f9c-ba98-fc4a503b6248.png">
 
-# Drawbacks
-- We have to hard code everytime whenever we want to use any class/interface.
-
-# Type 
-
-1. **Transient** 
-- objects are always different; a new instance is provided to every controller and every service. 
-- single instance for the lifetime of the application domain.
-2. **Scoped** 
-- objects are the same within a request, but different across different requests.
-- single instance for the duration of the scoped request, which means per HTTP request in ASP.NET
-3. **Singleton** 
-- objects are the same for every object and every request. 
--  single instance for the lifetime of the application domain.
