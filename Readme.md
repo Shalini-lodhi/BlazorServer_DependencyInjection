@@ -20,3 +20,4 @@ Adding ```AddVehicleFactory``` to the services. (```builder.Services.AddVehicleF
 
 Injecting Factory method to the interface.
 
+![image](https://user-images.githubusercontent.com/55933789/229767759-65b36472-87e5-4e24-8997-17f9b83f5282.png)
