@@ -1,21 +1,18 @@
-# Dependency Injection (Blazor Server)
+# Interface with Different Implementation
 
-[Index.razor]
-```c#
-@page "/"
-@using DependencyInjection.Logic
-@inject ILogicClass logic
-@inject ILogger<Index> logger
+[FactorySamples/Vehicle.cs]
+One interface different implentation.
+- Interface : ```IVehicle```
+- Implementation : ```Car```, ```Truck``` and ```Bike```
 
-<PageTitle>Index</PageTitle>
+[Factories/DifferentImplementationFactory.cs]
+Factory for creating different instances
+- Creating Factory class ```VehicleFactory``` for seleting particular implementation("Truk", "Car" or "Bike") for the interface "IVehicle".
+- Adding **Dependency Injection** in ```DifferentImplementationFactoryExtention``` class for "Car", "Truck" and "Bike". This will create new instance for the implementation of interface whenever we call.
 
-<h1>Hello, world!</h1>
-<h3>Value1 : @logic.Value1</h3>
-<h3>Value1 : @logic.Value2</h3>
-@code {
-    protected override void OnInitialized()
-    {
-        logger.LogInformation("Displaying values of {Value1} and {Value2}", logic.Value1, logic.Value2);
-    }
-}
-```
+[Program.cs]
+Adding ```AddVehicleFactory``` to the services. (```builder.Services.AddVehicleFactory();```)
+
+[Pages/FactorySample.razor]
+Injecting Factory method to the interface.
+

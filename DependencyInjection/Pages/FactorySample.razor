@@ -1,0 +1,33 @@
+﻿@page "/factory-sample"
+@*@inject Func<ISample1> factorySample1*@
+@inject IAbstractFactory<ISample1> sample1factory
+@inject IAbstractFactory<ISample2> sample2factory
+@inject IUserDataFactory userDataFactory
+@inject IVehicleFactory vehicleFactory
+
+<PageTitle>Factory Sample</PageTitle>
+<h1>Hello, @user?.UserName!<br />Your choosen vehicle is  "@vehicle?.VehicleType"</h1>
+<h3>@vehicle?.Start()</h3>
+<p><b>Factory Dependency Injection</b></p>
+<p>Current Date and Time: @currentTime?.CurrentDateTime</p>
+<p><string>Random Number: @randomNumber?.RandomNumber</string></p>
+<button class="btn btn-primary" @onclick="GetFactoryCurrentTime"> Get Factory Current Time</button>
+
+@code {
+    ISample1? currentTime;
+    ISample2? randomNumber;
+    IUserData? user;
+    IVehicle? vehicle;
+
+    protected override void OnInitialized()
+    {
+        user = userDataFactory.Create("User");
+        vehicle = vehicleFactory.Create("Bike");
+    }
+
+    public void GetFactoryCurrentTime()
+    {
+        currentTime = sample1factory.Create();
+        randomNumber = sample2factory.Create();
+    }
+}
